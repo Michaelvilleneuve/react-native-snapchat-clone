@@ -3,6 +3,7 @@ import { Text, Modal, View } from 'react-native';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Icon, Badge } from 'native-base';
 import Theme from '../styles/theme.js';
 import Capture from './Capture/Capture.js';
+import List from './List/List.js';
 
 export default class App extends Component {
   
@@ -24,7 +25,7 @@ export default class App extends Component {
       </Header>
 
       <Content style={{padding: 20}}>
-        <Text>Test</Text>
+        <List/>
         <Modal
             animationType={"slide"}
             transparent={false}

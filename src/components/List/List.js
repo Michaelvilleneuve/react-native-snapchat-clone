@@ -14,6 +14,7 @@ export default class SnapList extends Component {
       this.setState({
         snaps: snaps
       });
+      this.props.updateListCount(snaps.length);
     });  
   }
 
@@ -27,6 +28,7 @@ export default class SnapList extends Component {
 
   renderSnaps() {
     if (this.state.snaps.length === 0) return;
+    
     return this.state.snaps.map((snap, i) => {
       return(
         <Single 

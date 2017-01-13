@@ -4,6 +4,15 @@ import { Container, Header, Title, Content, Button, Icon, Grid, Col } from 'nati
 import Camera from 'react-native-camera';
 
 export default class Capture extends Component {
+  
+  snap() {
+    this.camera.capture()
+      .then((data) => {
+        this.props.toggleSend(data);
+      })
+      .catch(err => console.error(err));
+  }
+
   render() {
     return (
       <View style={styles.main}>
@@ -17,7 +26,7 @@ export default class Capture extends Component {
         <View style={styles.buttonContainer}>
           <View style={styles.smallButtonContainer}>
             <Button 
-              onPress={this.props.toggleModal} 
+              onPress={this.snap.bind(this)} 
               transparent 
               style={styles.captureButton}>
               <Icon name='ios-camera-outline' />

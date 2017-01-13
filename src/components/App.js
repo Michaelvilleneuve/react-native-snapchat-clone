@@ -69,7 +69,7 @@ export default class App extends Component {
             transparent={false}
             visible={this.state.sendingPicture}
             >
-            <Send toggleList={this.toggleList.bind(this)} imageData={this.getImageData.bind(this)}/>
+            <Send toggleList={this.toggleList.bind(this)} getImageData={this.getImageData.bind(this)}/>
         </Modal>
 
       </Content>

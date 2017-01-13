@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { List, Button, Container, Header, Title, Content } from 'native-base';
 import Single from './Single/Single.js';
 import User from '../../../models/User.js'
+import Snap from '../../../models/Snap.js'
 import Theme from '../../styles/theme.js';
 
 export default class Send extends Component {
@@ -18,12 +19,24 @@ export default class Send extends Component {
     });  
   }
 
+  hasSelected(user_id) {
+    const data = {
+      recipient_id: user_id,
+      image: this.props.getImageData().path
+    }
+    
+    Snap.create(data)
+    .then((data) => {
+      console.log(data);
+    })
+  }
+
   render() {
     return (
       <Container theme={Theme}>
         <Header>
-          <Title>Send a snapp</Title>
-          <Button transparent>Cancel</Button>
+          <Title>Send</Title>
+          <Button transparent onPress={this.props.toggleList}>Cancel</Button>
         </Header>
         <Content>
           <List>
@@ -41,6 +54,7 @@ export default class Send extends Component {
         <Single 
           key={i}
           user={user}
+          hasSelected={this.hasSelected.bind(this)}
         />
       )
     })

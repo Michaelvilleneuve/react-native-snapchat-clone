@@ -1,4 +1,5 @@
 import API from '../config.js';
+import Image from './utils/image.js';
 
 const Snap = {
   findAll() {
@@ -21,7 +22,7 @@ const Snap = {
 
   create(content) {
     const data = JSON.stringify({
-      debt: content
+      snap: content
     })
 
     return fetch(`${API.url}snaps`, {

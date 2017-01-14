@@ -1,5 +1,5 @@
 import API from '../config.js';
-import Image from './utils/image.js';
+import { NativeModules } from 'react-native';
 
 const Snap = {
   findAll() {
@@ -26,10 +26,14 @@ const Snap = {
     })
 
     return fetch(`${API.url}snaps`, {
-            method: 'post',
-            body: data
-        })
-        .then(response => response.json())
+      method: 'post',
+      body: data,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+
   }
 }
 

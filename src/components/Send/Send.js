@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NativeModules } from 'react-native';
 import { List, Button, Container, Header, Title, Content } from 'native-base';
 import Single from './Single/Single.js';
 import User from '../../../models/User.js'
@@ -22,13 +23,13 @@ export default class Send extends Component {
   hasSelected(user_id) {
     const data = {
       recipient_id: user_id,
-      image: this.props.getImageData().path
+      image: this.props.getImageData()
     }
-    
+
     Snap.create(data)
-    .then((data) => {
-      console.log(data);
-    })
+      .then((data) => {
+        this.props.toggleList();
+      })
   }
 
   render() {

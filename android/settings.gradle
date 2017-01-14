@@ -1,4 +1,6 @@
 rootProject.name = 'rnsnapClone'
+include ':react-native-image-to-base64'
+project(':react-native-image-to-base64').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-to-base64/android')
 include ':react-native-camera'
 project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 include ':react-native-vector-icons'

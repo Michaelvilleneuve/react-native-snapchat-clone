@@ -8,7 +8,7 @@ export default class Capture extends Component {
   snap() {
     this.camera.capture()
       .then((data) => {
-        this.props.toggleSend(data);
+        this.props.toggleSend("data:image/png;base64," + data.data);
       })
       .catch(err => console.error(err));
   }
@@ -20,6 +20,8 @@ export default class Capture extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}
+          type="front"
+          captureTarget="memory"
           style={styles.camera}
           aspect={Camera.constants.Aspect.fill}>
         </Camera>

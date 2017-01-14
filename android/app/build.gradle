@@ -126,6 +126,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-image-to-base64')
     compile project(':react-native-camera')
     compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])

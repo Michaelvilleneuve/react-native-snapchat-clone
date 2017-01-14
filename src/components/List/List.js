@@ -9,13 +9,20 @@ export default class SnapList extends Component {
   }
 
   componentDidMount() {
+    this.refresh();  
+    setInterval(() => {
+      this.refresh();  
+    }, 10000);
+  }
+
+  refresh() {
     Snap.findAll()
     .then((snaps) => {
       this.setState({
         snaps: snaps
       });
       this.props.updateListCount(snaps.length);
-    });  
+    });
   }
 
   render() {

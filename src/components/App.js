@@ -52,7 +52,7 @@ export default class App extends Component {
 
       <Content>
         <Header>
-          <Title>SnapChat 2</Title>
+          <Title>SnapChat n°2</Title>
         </Header>
         <List updateListCount={this.updateListCount.bind(this)}/>
 

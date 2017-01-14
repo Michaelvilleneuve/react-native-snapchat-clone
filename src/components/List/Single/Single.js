@@ -11,10 +11,6 @@ export default class Single extends Component {
     return this.props.snap.viewed ? 'ios-checkmark-outline' : 'ios-cloud-download-outline';
   }
 
-  componentDidMount() {
-    console.log(this.props.snap);
-  }
-
   render() {
     return (
       <ListItem onPress={this.checkAction.bind(this)}>

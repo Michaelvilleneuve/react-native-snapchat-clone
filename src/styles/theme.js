@@ -104,16 +104,16 @@ export default {
 
     // Footer
     footerHeight: 55,
-    footerDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
+    footerDefaultBg: '#60C49E',
 
 
     //FooterTab
-    tabBarTextColor: (Platform.OS === 'ios' ) ? '#fff' : '#fff',
-    tabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#fff' : '#fff',
+    tabBarTextColor: '#fff',
+    tabBarActiveTextColor: '#fff',
     tabActiveBgColor: (Platform.OS=='ios') ? '#cde1f9' : undefined,
 
     //Tab
-    tabDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
+    tabDefaultBg: '#60C49E',
     topTabBarTextColor: (Platform.OS === 'ios' ) ? 'white' : '#b3c7f9',
     topTabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#007aff' : '#fff',
     topTabActiveBgColor: (Platform.OS=='ios') ? '#cde1f9' : undefined,
@@ -122,12 +122,12 @@ export default {
 
     // Header
     iosToolbarBtnColor: '#007aff',
-    toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
+    toolbarDefaultBg: '#60C49E',
     toolbarHeight: (Platform.OS === 'ios' ) ? 64 : 56,
     toolbarIconSize: (Platform.OS === 'ios' ) ? 20 : 22,
     toolbarInputColor: '#fff',
     toolbarInverseBg: '#222',
-    toolbarTextColor: (Platform.OS==='ios') ? '#fff' : '#fff',
+    toolbarTextColor: '#fff',
     get statusBarColor() {
         return Color(this.toolbarDefaultBg).darken(0.2).hexString();
     },

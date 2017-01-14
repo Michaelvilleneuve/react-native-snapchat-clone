@@ -94,7 +94,7 @@ export default class SnapList extends Component {
     return(
         <Container>
             <Content style={{padding: 30}}>
-                <H1>Aucuns Snap pour le moment :(</H1>
+                <H1 style={{color: "#fff"}}>Aucuns Snap pour le moment :(</H1>
             </Content>
         </Container>
       )

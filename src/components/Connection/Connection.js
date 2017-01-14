@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Dimensions } from 'react-native';
+import storage from 'react-native-sync-storage';
 import { Container, Content, InputGroup, Input, Button, Icon, View, Text} from 'native-base';
 import User from '../../../models/User.js';
+import API from '../../../config.js';
 
 export default class Connection extends Component {
   state = {
     errors: ""
   }
+
   connect() {
     User.connect(this.state)
     .then((response) => {
@@ -17,7 +20,13 @@ export default class Connection extends Component {
         return;
       }
       this.props.checkConnection();
+      this.setToken();
     })
+  }
+
+  async setToken() {
+    await storage.init;
+    storage.set('headers', API.headers);
   }
 
 

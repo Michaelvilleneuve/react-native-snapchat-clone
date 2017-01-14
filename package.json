@@ -12,7 +12,8 @@
     "react-native": "0.40.0",
     "react-native-camera": "^1.0.0-alpha1",
     "react-native-image-to-base64": "^0.1.0",
-    "react-native-router-flux": "^3.37.0"
+    "react-native-router-flux": "^3.37.0",
+    "react-native-sync-storage": "^1.0.0"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",

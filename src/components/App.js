@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Text, Modal, View } from 'react-native';
+import storage from 'react-native-sync-storage';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Icon, Badge } from 'native-base';
 import Theme from '../styles/theme.js';
 import User from '../../models/User.js';
+import API from '../../config.js';
 import Capture from './Capture/Capture.js';
 import Connection from './Connection/Connection.js';
 import List from './List/List.js';
@@ -15,6 +17,19 @@ export default class App extends Component {
     takingPicture: false,
     sendingPicture: false,
     listCount: ""
+  }
+
+  componentDidMount() {
+    this.getToken();
+  }
+
+  async getToken() {
+    await storage.init;
+    const headers = storage.get('headers');
+    if (headers) {
+      API.headers = headers;
+      this.checkConnection();
+    }
   }
 
   updateListCount(count) {

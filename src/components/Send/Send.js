@@ -37,7 +37,7 @@ export default class Send extends Component {
       <Container theme={Theme}>
         <Header>
           <Title>Send</Title>
-          <Button transparent onPress={this.props.toggleList}>Cancel</Button>
+          <Button transparent onPress={this.props.toggleList} style={{color: "white"}}>Cancel</Button>
         </Header>
         <Content>
           <List>

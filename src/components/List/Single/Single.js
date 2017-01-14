@@ -15,9 +15,9 @@ export default class Single extends Component {
     return (
       <ListItem onPress={this.checkAction.bind(this)}>
         <Thumbnail size={40} source={{uri: this.props.snap.user.image}} />
-        <Text>{this.props.snap.user.email}</Text>
+        <Text style={{color: "#fff"}}>{this.props.snap.user.email}</Text>
         <Text note>Reçu le {this.props.snap.created_at}</Text>
-        <Icon name={this.iconToDisplay()} style={{position: 'absolute', right: 10}}/>
+        <Icon name={this.iconToDisplay()} style={{position: 'absolute', right: 10, color: "#fff"}}/>
       </ListItem>
     );
   }

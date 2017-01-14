@@ -104,17 +104,17 @@ export default {
 
     // Footer
     footerHeight: 55,
-    footerDefaultBg: (Platform.OS === 'ios' ) ? '#F8F8F8' : '#4179F7',
+    footerDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
 
 
     //FooterTab
-    tabBarTextColor: (Platform.OS === 'ios' ) ? '#6b6b6b' : '#b3c7f9',
-    tabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#007aff' : '#fff',
+    tabBarTextColor: (Platform.OS === 'ios' ) ? '#fff' : '#fff',
+    tabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#fff' : '#fff',
     tabActiveBgColor: (Platform.OS=='ios') ? '#cde1f9' : undefined,
 
     //Tab
-    tabDefaultBg: (Platform.OS === 'ios' ) ? '#F8F8F8' : '#4179F7',
-    topTabBarTextColor: (Platform.OS === 'ios' ) ? '#6b6b6b' : '#b3c7f9',
+    tabDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
+    topTabBarTextColor: (Platform.OS === 'ios' ) ? 'white' : '#b3c7f9',
     topTabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#007aff' : '#fff',
     topTabActiveBgColor: (Platform.OS=='ios') ? '#cde1f9' : undefined,
     topTabBarBorderColor: (Platform.OS === 'ios' ) ? '#007aff' : '#fff',
@@ -122,12 +122,12 @@ export default {
 
     // Header
     iosToolbarBtnColor: '#007aff',
-    toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#F8F8F8' : '#4179F7',
+    toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#60C49E' : '#60C49E',
     toolbarHeight: (Platform.OS === 'ios' ) ? 64 : 56,
     toolbarIconSize: (Platform.OS === 'ios' ) ? 20 : 22,
-    toolbarInputColor: '#CECDD2',
+    toolbarInputColor: '#fff',
     toolbarInverseBg: '#222',
-    toolbarTextColor: (Platform.OS==='ios') ? '#000' : '#fff',
+    toolbarTextColor: (Platform.OS==='ios') ? '#fff' : '#fff',
     get statusBarColor() {
         return Color(this.toolbarDefaultBg).darken(0.2).hexString();
     },
@@ -149,7 +149,7 @@ export default {
         return this.textColor;
     },
     get inputColorPlaceholder () {
-        return '#575757';
+        return '#fff';
     },
 
     inputGroupMarginBottom: 10,
@@ -175,7 +175,7 @@ export default {
     listDividerBg: '#ddd',
     listItemHeight: 45,
     listItemPadding: (Platform.OS === 'ios' ) ? 12 : 16,
-    listNoteColor: '#808080',
+    listNoteColor: '#fff',
     listNoteSize: 13,
 
 

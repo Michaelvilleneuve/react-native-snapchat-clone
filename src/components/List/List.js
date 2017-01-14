@@ -67,6 +67,7 @@ export default class SnapList extends Component {
             transparent={false}
             style={{backgroundColor: "black"}}
             visible={this.state.viewingPicture}
+            onRequestClose={() => { return true}}
             >
             <Show getShowId={this.getShowId.bind(this)} back={this.back.bind(this)}/>
         </Modal>

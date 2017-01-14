@@ -20,7 +20,6 @@ export default class Capture extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}
-          type="front"
           captureTarget="memory"
           style={styles.camera}
           aspect={Camera.constants.Aspect.fill}>

@@ -57,11 +57,11 @@ export default class App extends Component {
         <List updateListCount={this.updateListCount.bind(this)}/>
 
         <Modal
-            animationType={"slide"}
-            transparent={false}
-            visible={this.state.takingPicture}
-            >
-            <Capture toggleSend={this.toggleSend.bind(this)}/>
+          animationType={"slide"}
+          transparent={false}
+          visible={this.state.takingPicture}
+          >
+          <Capture toggleSend={this.toggleSend.bind(this)}/>
         </Modal>
 
         <Modal

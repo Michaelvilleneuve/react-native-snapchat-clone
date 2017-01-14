@@ -43,16 +43,20 @@ export default class SnapList extends Component {
   back(id) {
     Snap.destroy(id)
       .then(() => {
-        _.remove(this.state.snaps, (snap) => {return snap.id === id})
-        this.setState({
-          snaps: this.state.snaps
+        _.map(this.state.snaps, (snap) => {
+          return (snap.id === id) ? this.viewed(snap) : snap
         });
-        this.props.updateListCount(this.state.snaps.length);
         this.setState({
+          snaps: this.state.snaps,
           viewingPicture: false
         });
+        this.props.updateListCount(this.state.snaps.length);
       })
+  }
 
+  viewed(snap) {
+    snap.view = true;
+    return snap;
   }
 
   render() {

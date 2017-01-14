@@ -23,16 +23,12 @@ export default class App extends Component {
   toggleCapture() {
     this.setState({
       takingPicture: !this.state.takingPicture,
-      sendingPicture: false
+      sendingPicture: false,
     });
   }
 
-  getImageData() {
-  	return this.state.imageData;
-  }
-
   toggleSend(data) {
-  	this.setState({
+    this.setState({
       takingPicture: false,
       sendingPicture: true,
       imageData: data,
@@ -40,22 +36,26 @@ export default class App extends Component {
   }
 
   toggleList() {
-  	this.setState({
+    this.setState({
       takingPicture: false,
-      sendingPicture: false
-    });	
+      sendingPicture: false,
+    }); 
+  }
+  
+  getImageData() {
+  	return this.state.imageData;
   }
 
   render() {
     return (
     <Container theme={Theme}>
-      <Header>
-        <Title>Snapps</Title>
-      </Header>
 
-      <Content style={{padding: 20}}>
+      <Content>
+        <Header>
+          <Title>SnapChat 2</Title>
+        </Header>
         <List updateListCount={this.updateListCount.bind(this)}/>
-        
+
         <Modal
             animationType={"slide"}
             transparent={false}
